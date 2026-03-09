@@ -1,4 +1,5 @@
 name = "Vixen"
+language_servers = ["vx-lsp"]
 grammar = "vixen"
 path_suffixes = ["vixen", "vx"]
 line_comments = ["//"]

@@ -17,7 +17,9 @@ repository = "https://github.com/bearcove/tree-sitter-vixen"
 rev = "fde0a8d8a057c217ae9ee8c1fb4ceaa00d10f0d9"
 path = "."
 
-[language_servers]
+[language_servers.vx-lsp]
+name = "Vixen LSP"
+languages = ["Vixen"]
 
 [context_servers]
 
