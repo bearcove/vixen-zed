@@ -1,0 +1,3 @@
+[submodule "grammars/vixen"]
+	path = grammars/vixen
+	url = https://github.com/bearcove/tree-sitter-vixen
