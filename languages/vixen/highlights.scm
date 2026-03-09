@@ -1,5 +1,7 @@
 [
   "fn"
+  "let"
+  "type"
   "struct"
   "enum"
   "newtype"
@@ -93,14 +95,23 @@
 (keyword_parameter
   (lower_identifier) @property)
 
-(type_declaration
+(struct_declaration
+  (upper_identifier) @type)
+
+(enum_declaration
+  (upper_identifier) @type)
+
+(newtype_declaration
+  (upper_identifier) @type)
+
+(type_alias_declaration
   (upper_identifier) @type)
 
 (type_parameter) @type.parameter
 (type_path
   (upper_identifier) @type)
 
-(enum_variant
+(enum_variant_declaration
   (upper_identifier) @constructor)
 
 (variant_pattern
