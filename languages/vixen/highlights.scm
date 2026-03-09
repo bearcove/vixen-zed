@@ -65,6 +65,7 @@
   "..="
 ] @operator
 
+(doc_comment) @comment.doc
 (line_comment) @comment
 (block_comment) @comment
 (escape_sequence) @string.escape
