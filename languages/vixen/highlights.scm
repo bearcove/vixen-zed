@@ -83,6 +83,9 @@
 (function_declaration
   (lower_identifier) @function)
 
+(function_declaration
+  (upper_identifier) @constructor)
+
 (parameter
   (binding_pattern
     (lower_identifier) @variable.parameter))
