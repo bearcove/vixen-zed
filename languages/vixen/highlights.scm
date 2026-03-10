@@ -45,8 +45,8 @@
   "with="
   "?"
   "!"
-  "@"
   "#"
+  "#["
 ] @punctuation.delimiter
 
 [
@@ -83,8 +83,8 @@
 (dollar_identifier) @variable.special
 (pipe_placeholder) @variable.special
 
-(attribute
-  name: (lower_identifier) @attribute)
+(attribute_entry
+  key: (lower_identifier) @attribute)
 
 (capability_tag
   "#" @operator
