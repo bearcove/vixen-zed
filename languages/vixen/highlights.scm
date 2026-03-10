@@ -7,6 +7,7 @@
   "newtype"
   "of"
   "with"
+  "where"
   "match"
   "if"
   "else"
@@ -26,7 +27,6 @@
 [
   "{"
   "}"
-  "%{"
   "("
   ")"
   "["
@@ -44,6 +44,7 @@
   "="
   "with="
   "?"
+  "!"
   "@"
   "#"
 ] @punctuation.delimiter
@@ -62,6 +63,7 @@
   ">="
   "&&"
   "||"
+  "|>"
   ".."
   "..="
 ] @operator
@@ -72,10 +74,14 @@
 (escape_sequence) @string.escape
 (string_literal) @string
 (interpolated_string) @string.special
+(path_literal) @string.special
+(interpolated_path_literal) @string.special
+(path_content) @string.special
 (string_content) @string
 (integer_literal) @number
 (float_literal) @number.float
 (dollar_identifier) @variable.special
+(pipe_placeholder) @variable.special
 
 (attribute
   name: (lower_identifier) @attribute)
@@ -126,7 +132,7 @@
 (struct_field_declaration
   (lower_identifier) @property)
 
-(struct_literal_field
+(record_field
   (lower_identifier) @property)
 
 (struct_pattern_field
@@ -135,13 +141,16 @@
 (field_path
   (lower_identifier) @property)
 
-(keyword_argument
-  (lower_identifier) @property)
-
 (field_expression
   (lower_identifier) @property)
 
 (field_expression
+  (upper_identifier) @constructor)
+
+(method_adapter_expression
+  (lower_identifier) @property)
+
+(method_adapter_expression
   (upper_identifier) @constructor)
 
 (tuple_index) @property

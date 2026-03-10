@@ -14,7 +14,7 @@ capabilities = []
 
 [grammars.vixen]
 repository = "https://github.com/bearcove/tree-sitter-vixen"
-rev = "fde0a8d8a057c217ae9ee8c1fb4ceaa00d10f0d9"
+rev = "93bdbb2e0067a523a2fb6cce98a332aff049cdc5"
 path = "."
 
 [language_servers.vx-lsp]
