@@ -7,3 +7,20 @@
 (match_expression "}" @end) @indent
 (array_expression "]" @end) @indent
 (tuple_expression ")" @end) @indent
+
+; While typing, unfinished open delimiters recover as ERROR nodes instead of
+; their final syntax nodes. Keep indent active to EOF from the delimiter.
+(document
+  (ERROR "{" @start)
+  (#eq? @start "{")
+) @indent
+
+(document
+  (ERROR "[" @start)
+  (#eq? @start "[")
+) @indent
+
+(document
+  (ERROR "(" @start)
+  (#eq? @start "(")
+) @indent

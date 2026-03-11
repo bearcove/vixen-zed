@@ -17,6 +17,8 @@
   "import"
   "return"
   "fail"
+  "namespace"
+  "extend"
 ] @keyword
 
 [
@@ -114,6 +116,14 @@
 
 (type_alias_declaration
   (upper_identifier) @type)
+
+(namespace_declaration
+  (type_path
+    (upper_identifier) @type))
+
+(extend_declaration
+  (type_path
+    (upper_identifier) @type))
 
 (type_parameter) @type.parameter
 (type_path
