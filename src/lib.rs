@@ -12,14 +12,13 @@ impl zed::Extension for VixenExtension {
         _language_server_id: &LanguageServerId,
         worktree: &Worktree,
     ) -> Result<Command> {
-        let path = worktree.which("vx-lsp").ok_or_else(|| {
-            "vx-lsp not found in PATH. Please install vixen and ensure vx-lsp is on your PATH."
-                .to_string()
+        let path = worktree.which("vx").ok_or_else(|| {
+            "vx not found in PATH. Please install vixen and ensure vx is on your PATH.".to_string()
         })?;
 
         Ok(Command {
             command: path,
-            args: vec![],
+            args: vec!["lsp".to_string()],
             env: vec![],
         })
     }
